@@ -6,7 +6,10 @@
     "installsAfter": [
         "ghcr.io/devcontainers/features/nix:1"
     ],
-    "dependsOn": [
-        "ghcr.io/devcontainers/features/nix:1"
-    ]
+    "dependsOn": {
+        "ghcr.io/devcontainers/features/nix:1": {
+            "multiUser": true,
+            "extraNixConfig": "experimental-features = nix-command flakes, trusted-users = root vscode"
+        }
+    }
 }
