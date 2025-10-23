@@ -1,0 +1,12 @@
+{
+    "name": "Installs IHP",
+    "id": "ihp",
+    "version": "1.0.0",
+    "description": "Installs IHP properly for devcontainers",
+    "installsAfter": [
+        "ghcr.io/devcontainers/features/nix:1"
+    ],
+    "dependsOn": [
+        "ghcr.io/devcontainers/features/nix:1"
+    ]
+}
