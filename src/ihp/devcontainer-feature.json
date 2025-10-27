@@ -1,15 +1,15 @@
 {
     "name": "Installs IHP",
     "id": "ihp",
-    "version": "1.0.2",
+    "version": "1.0.5",
     "description": "Installs IHP properly for devcontainers",
     "installsAfter": [
         "ghcr.io/devcontainers/features/common-utils"
     ],
     "dependsOn": {
         "ghcr.io/devcontainers/features/nix:1": {
-            "version": "latest",
             "multiUser": true,
+            "packages": ["cachix"],
             "extraNixConfig": "experimental-features = nix-command flakes, trusted-users = root vscode"
         }
     }
